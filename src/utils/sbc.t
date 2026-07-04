@@ -9,5 +9,7 @@ anyhow we are preparing json testdata files for loginpage, employee, any other a
 git init
 git status
 git add .
-
-
+git commit -m "Initial Playwright TypeScript framework"
+git remote add origin https://github.com/AvudurthiRamesh/playwright-typescript-lab.git
+git branch -M main
+git push -u origin main
