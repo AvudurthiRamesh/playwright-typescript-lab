@@ -1,4 +1,32 @@
+
+
+
+
+
+
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+
+// try {
+//   // dotenv is optional; load if installed
+//   // eslint-disable-next-line @typescript-eslint/no-var-requires
+//   require('dotenv').config();
+//   console.log("BASE_URL:", process.env.BASE_URL);
+// } catch {
+//   // ignore if dotenv is not installed
+// }
+
+
+dotenv.config();
+
+console.log("BASE_URL =", process.env.BASE_URL);
+
+
+
+
+
+
+
 
 /**
  * Read environment variables from file.
@@ -25,6 +53,9 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    
+    baseURL: process.env.BASE_URL,
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
